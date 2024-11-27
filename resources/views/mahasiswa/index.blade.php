@@ -22,9 +22,9 @@
                         <th width="5%">NO</th>
                         <th>NIM</th>
                         <th>NAMA</th>
-                        <th>NO TELEPON</th>
+                        {{-- <th>NO TELEPON</th>
                         <th>EMAIL</th>
-                        <th>JENIS KELAMIN</th>
+                        <th>JENIS KELAMIN</th> --}}
                         <th>FAKULTAS</th>
                         <th>DOSEN</th>
                         <th>MATA KULIAH</th>
@@ -36,17 +36,20 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->nim }}</td>
                             <td>{{ $item->nama }}</td>
-                            <td>{{ $item->telp }}</td>
+                            {{-- <td>{{ $item->telp }}</td>
                             <td>{{ $item->email }}</td>
-                            <td>{{ $item->jenis_kelamin }}</td>
+                            <td>{{ $item->jenis_kelamin }}</td> --}}
                             <td>{{ $item->fakultas->fakultas }}</td>
                             <td>{{ $item->dosen->nama ?? '-' }}</td>
                             <td>{{ $item->matkul->nama ?? '-' }}</td>
                             <td>
+                              <a href="{{ route('mahasiswa.show', $item->id) }}" class="btn btn-sm btn-outline-success">
+                                <i class="fa fa-edit"></i> Show
+                              </a>&nbsp;
                               <a href="{{ route('mahasiswa.edit', $item->id) }}" class="btn btn-sm btn-outline-warning">
                                 <i class="fa fa-edit"></i> Edit
                               </a>
-                              &nbsp; &nbsp; &nbsp;
+                              &nbsp;
                               <a href="#" class="btn btn-sm btn-outline-danger" onclick="deleteMahasiswa({{ $item->id }})">
                                 <i class="fa fa-trash"></i> Hapus
                               </a>

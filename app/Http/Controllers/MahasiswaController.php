@@ -114,6 +114,15 @@ class MahasiswaController extends Controller
     ]);
   }
 
+  public function show($id)
+  {
+    $page_title = 'Detail Mahasiswa';
+
+    $mahasiswa = Mahasiswa::with('fakultas:id,fakultas', 'matkul:id,nama', 'dosen:id,nama')->findOrFail($id);
+
+    return view('mahasiswa.show', compact('page_title','mahasiswa'));
+  }
+
   public function destroy($id)
   {
     $mahasiswa = Mahasiswa::findOrFail($id);

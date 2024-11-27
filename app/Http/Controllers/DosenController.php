@@ -106,6 +106,15 @@ class DosenController extends Controller
     ]);
   }
 
+  public function show($id)
+  {
+    $page_title = 'Detail Dosen';
+
+    $dosen = Dosen::with('fakultas:id,fakultas', 'matkul:id,nama')->findOrFail($id);
+
+    return view('dosen.show', compact('page_title', 'dosen'));
+  }
+
   public function destroy($id)
   {
     $dosen = Dosen::findOrFail($id);

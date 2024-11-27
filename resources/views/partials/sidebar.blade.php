@@ -83,8 +83,8 @@
       </ul>
     </li>
 
-    <li class="nav-item {{ $page_title == 'List Dosen' || $page_title == 'Create Dosen' ? 'menu-open' : '' }}">
-      <a href="#" class="nav-link {{ $page_title == 'List Dosen' || $page_title == 'Create Dosen' ? 'active' : '' }}">
+    <li class="nav-item {{ $page_title == 'List Dosen' || $page_title == 'Create Dosen' || $page_title == 'Detail Dosen' ? 'menu-open' : '' }}">
+      <a href="#" class="nav-link {{ $page_title == 'List Dosen' || $page_title == 'Create Dosen' || $page_title == 'Detail Dosen' ? 'active' : '' }}">
         <i class="nav-icon fas fa-user-graduate"></i>
         <p>Dosen<i class="right fas fa-angle-left"></i> </p>
       </a>
@@ -127,29 +127,5 @@
         </li>
       </ul>
     </li>
-
-
-
-    {{-- <li class="nav-item {{ $page_title == 'Users' || $page_title == 'Create Users' ? 'menu-open' : '' }}">
-      <a href="#" class="nav-link {{ $page_title == 'Users' || $page_title == 'Create Users' ? 'active' : '' }}">
-        <i class="nav-icon fas fa-user"></i>
-        <p> Users <i class="right fas fa-angle-left"></i> </p>
-      </a>
-      <ul class="nav nav-treeview">
-        <li class="nav-item {{ $page_title == 'Users' ? 'menu-open' : '' }}">
-          <a href="{{ url('/admin/users') }}" class="nav-link {{ $page_title == 'Users' ? 'active' : '' }}">
-            <i class="far fa-circle nav-icon" style="color: #00ffe5;" ></i>
-            <p>List</p>
-          </a>
-        </li>
-        <li class="nav-item {{ $page_title == 'Create Users' ? 'menu-open' : '' }}">
-          <a href="{{ url('/admin/users/create') }}"
-            class="nav-link {{ $page_title == 'Create Users' ? 'active' : '' }}">
-            <i class="far fa-circle nav-icon" style="color: #43df00;"></i>
-            <p>Create</p>
-          </a>
-        </li>
-      </ul>
-    </li> --}}
   </ul>
 </nav>

@@ -22,9 +22,9 @@
                       <th width="5%">NO</th>
                       <th>NIDN</th>
                       <th>NAMA</th>
-                      <th>NO TELEPON</th>
+                      {{-- <th>NO TELEPON</th>
                       <th>EMAIL</th>
-                      <th>JENIS KELAMIN</th>
+                      <th>JENIS KELAMIN</th> --}}
                       <th>FAKULTAS</th>
                       <th>MATA KULIAH</th>
                       <th>ACTION</th>
@@ -35,16 +35,18 @@
                           <td>{{ $loop->iteration }}</td>
                           <td>{{ $item->nidn }}</td>
                           <td>{{ $item->nama }}</td>
-                          <td>{{ $item->telp }}</td>
+                          {{-- <td>{{ $item->telp }}</td>
                           <td>{{ $item->email }}</td>
-                          <td>{{ $item->jenis_kelamin }}</td>
+                          <td>{{ $item->jenis_kelamin }}</td> --}}
                           <td>{{ $item->fakultas->fakultas }}</td>
                           <td>{{ $item->matkul->nama ?? '-' }}</td>
                           <td>
+                            <a href="{{ route('dosen.show', $item->id) }}" class="btn btn-sm btn-outline-success">
+                              <i class="fa fa-edit"></i> Show
+                            </a>&nbsp;
                             <a href="{{ route('dosen.edit', $item->id) }}" class="btn btn-sm btn-outline-warning">
                               <i class="fa fa-edit"></i> Edit
-                            </a>
-                            &nbsp; &nbsp; &nbsp;
+                            </a>&nbsp;
                             <a href="#" class="btn btn-sm btn-outline-danger"
                               onclick="deleteDosen({{ $item->id }})">
                               <i class="fa fa-trash"></i> Hapus
