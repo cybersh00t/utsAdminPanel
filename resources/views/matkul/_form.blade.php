@@ -58,7 +58,7 @@
   </div>
 </div>
 
-<div class="form-row justify-content-center mb-5">
+<div class="form-row justify-content-center">
   <div class="col-3">
     <label for="sortOrderSks">Jumlah SKS</label>
     <div class="input-group">
@@ -86,8 +86,8 @@
 </div>
 
 
-<div class="form-row justify-content-center">
-  <div class="col-1">
+<div class="form-row justify-content-center pt-4">
+  <div class="col-2">
     <button type="submit" class="btn btn-block btn-outline-success">Simpan</button>
   </div>
 </div>

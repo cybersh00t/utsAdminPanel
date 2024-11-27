@@ -97,8 +97,8 @@
   </div>
 
 </div>
-<div class="form-row justify-content-center pt-5">
-  <div class="col-1">
+<div class="form-row justify-content-center pt-3">
+  <div class="col-2">
     <button type="submit" class="btn btn-block btn-outline-success">Simpan</button>
   </div>
 </div>
